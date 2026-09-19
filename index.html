@@ -9,7 +9,11 @@
   <body>
     <header class="header">
       <div class="header-menu">
-        <img class="header-logo" src="img/logo.png" alt="Coffee House Logo" />
+        <img
+          class="header-logo"
+          src="img/header/logo.svg"
+          alt="Coffee House Logo"
+        />
         <div class="header-navigation">
           <ul class="header__list">
             <li class="header__item">
@@ -28,17 +32,86 @@
         </div>
         <div class="header-actions">
           <div class="theme-witch">
-            <button type="button" class="theme__light"></button>
-            <button type="button" class="theme__dark"></button>
+            <button type="button" class="theme__light">
+              <img
+                class="theme__icon"
+                src="img/header/Sun.svg"
+                alt="Sun Icon"
+              />
+            </button>
+            <button type="button" class="theme__dark">
+              <img
+                class="theme__icon"
+                src="img/header/Moon.svg"
+                alt="Moon Icon"
+              />
+            </button>
           </div>
           <div class="coffee-menu">
-            <span class="coffee-menu__text">menu</span>
-            <img class="coffee-menu__icon" src="img/menu.svg" alt="Menu Icon" />
+            <p class="coffee-menu__text">menu</p>
+            <img
+              class="coffee-menu__icon"
+              src="img/header/coffee-cup.svg"
+              alt="Menu Icon"
+            />
           </div>
         </div>
       </div>
     </header>
-    <main class="main"></main>
+    <main class="main">
+      <section class="hero">
+        <div class="hero-container">
+          <div class="hero-offer">
+            <h1 class="hero-offer__title">
+              enjoy premium coffee at our charming cafe
+            </h1>
+            <p class="hero-offer__description">
+              with its inviting atmosphere and delicious coffee options, the
+              Coffee House Resource is a popular destination for coffee lovers
+              and those seeking a warm and inviting space to enjoy their
+              favorite beverage.
+            </p>
+            <a class="hero-offer__button" href="/">menu</a>
+          </div>
+        </div>
+      </section>
+      <section class="favorite-coffee">
+        <div class="favorite-coffee__container">
+          <h2 class="favorite-coffee__title">choose your favorite coffee</h2>
+        </div>
+        <div class="favorite-coffee__slider">
+          <button
+            type="button"
+            class="favorite-coffee__arrow favorite-coffee__arrow--left"
+          ></button>
+          <div class="favorite-coffee__slider--row">
+            <div class="favorite-coffee__slider--slide">
+              <div class="favorite-coffee__slider--content">
+                <img src="img/main/coffee-slider-1.jpg" alt="coffee-slider-1" />
+                <div class="favorite-coffee__slider--description">
+                  <p class="favorite-coffee__slider--description--text">
+                    s’mores Frappuccino
+                  </p>
+                  <p class="favorite-coffee__slider--description--title">
+                    this new drink takes an espresso and mixes it with brown
+                    sugar and cinnamon before being topped with oat milk.
+                  </p>
+                  <p class="favorite-coffee__slider--description--price">
+                    $5.50
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="favorite-coffee__arrow favorite-coffee__arrow--right"
+          ></button>
+        </div>
+      </section>
+      <section class="about"></section>
+      <section class="mobile-app"></section>
+    </main>
     <footer class="footer"></footer>
   </body>
   <script src="index.js"></script>
