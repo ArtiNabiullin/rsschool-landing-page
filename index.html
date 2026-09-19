@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/header/logo.svg" />
     <title>Coffee House</title>
   </head>
   <body>
@@ -17,7 +18,9 @@
         <div class="header-navigation">
           <ul class="header__list">
             <li class="header__item">
-              <a href="catalog.html" class="header__link">favorite coffee</a>
+              <a href="#favorite-coffee" class="header__link"
+                >favorite coffee</a
+              >
             </li>
             <li class="header__item">
               <a href="#about" class="header__link">about</a>
@@ -35,14 +38,14 @@
             <button type="button" class="theme__light">
               <img
                 class="theme__icon"
-                src="img/header/Sun.svg"
+                src="img/buttons/Sun.svg"
                 alt="Sun Icon"
               />
             </button>
             <button type="button" class="theme__dark">
               <img
                 class="theme__icon"
-                src="img/header/Moon.svg"
+                src="img/buttons/Moon.svg"
                 alt="Moon Icon"
               />
             </button>
@@ -75,7 +78,7 @@
           </div>
         </div>
       </section>
-      <section class="favorite-coffee">
+      <section class="favorite-coffee" id="favorite-coffee">
         <div class="favorite-coffee-container">
           <h2 class="favorite-coffee__title">choose your favorite coffee</h2>
         </div>
@@ -87,7 +90,11 @@
           <div class="favorite-coffee__slider--row">
             <div class="favorite-coffee__slider--slide">
               <div class="favorite-coffee__slider--content">
-                <img src="img/main/coffee-slider-1.jpg" alt="coffee-slider-1" />
+                <img
+                  src="img/main/coffee-slider-1.jpg"
+                  class="favorite-coffee__slider--1"
+                  alt="coffee-slider-1"
+                />
                 <div class="favorite-coffee__slider--description">
                   <p class="favorite-coffee__slider--description--text">
                     s’mores Frappuccino
@@ -109,7 +116,7 @@
           ></button>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="about-container">
           <h2 class="about__title">
             Resource is the perfect and cozy place where you can enjoy a variety
@@ -118,19 +125,142 @@
           </h2>
           <div class="about__images">
             <div class="about__images--column--1">
-              <img src="img/main/about-1.jpg" alt="about-1" />
-              <img src="img/main/about-2.jpg" alt="about-1" />
+              <img
+                src="img/main/about-1.jpg"
+                class="about__images--column--one"
+                alt="about-1"
+              />
+              <img
+                src="img/main/about-2.jpg"
+                class="about__images--column--two"
+                alt="about-1"
+              />
             </div>
             <div class="about__images--column--2">
-              <img src="img/main/about-3.jpg" alt="about-1" />
-              <img src="img/main/about-4.jpg" alt="about-1" />
+              <img
+                src="img/main/about-3.jpg"
+                class="about__images--column--three"
+                alt="about-1"
+              />
+              <img
+                src="img/main/about-4.jpg"
+                class="about__images--column--four"
+                alt="about-1"
+              />
             </div>
           </div>
         </div>
       </section>
-      <section class="mobile-app"></section>
+      <section class="mobile-app" id="mobile">
+        <div class="mobile-app-container">
+          <div class="mobile-app-container__offer">
+            <h2 class="mobile-app-container__offer--title">
+              download our app to start ordering
+            </h2>
+            <p class="mobile-app-container__offer--text">
+              download the Resource app today and experience the comfort of
+              ordering your favorite coffee from wherever you are
+            </p>
+            <div class="mobile-app-container__offer--buttons">
+              <button type="button" class="button-app-store">
+                <img
+                  src="img/buttons/icon 1.svg"
+                  class="button-app-store__image"
+                  alt="app-store"
+                />
+                <div class="button-app-store__description">
+                  <p class="button-app-store--title">available on the</p>
+                  <p class="button-app-store--text">app Store</p>
+                </div>
+              </button>
+              <button type="button" class="button-google-play">
+                <img
+                  src="img/buttons/Icon 2.svg"
+                  class="button-google-play__image"
+                  alt="google-play"
+                />
+                <div class="button-google-play__description">
+                  <p class="button-google-play--title">available on</p>
+                  <p class="button-google-play--text">google Play</p>
+                </div>
+              </button>
+            </div>
+          </div>
+          <img
+            src="img/main/mobile-screens.jpg"
+            class="mobile-app-container__image"
+            alt="mobile-screens"
+          />
+        </div>
+      </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer" id="contacts">
+      <div class="footer-container">
+        <div class="footer-offer">
+          <h2 class="footer-offer__title">
+            Sip, Savor, Smile. It’s coffee time!
+          </h2>
+          <div class="footer-offer__socials">
+            <button type="button" class="footer-offer__socials--twitter">
+              <img
+                src="img/buttons/twitter.svg"
+                alt="twitter-logo"
+                class="twitter-logo"
+              />
+            </button>
+            <button type="button" class="footer-offer__socials--instagram">
+              <img
+                src="img/buttons/instagram.svg"
+                alt="instagram-logo"
+                class="instagram-logo"
+              />
+            </button>
+            <button type="button" class="footer-offer__socials--facebook">
+              <img
+                src="img/buttons/facebook.svg"
+                alt="facebook-logo"
+                class="facebook-logo"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="footer-contacts-info">
+          <p class="footer-contacts-info__title">contact us</p>
+          <div class="footer-contacts-info__description">
+            <div class="footer-contacts-info__description--links">
+              <img
+                src="img/footer/pin-alt.svg"
+                alt="pin-alt"
+                class="footer-contacts-info__description--image"
+              />
+              <p class="footer-contacts-info__description--text">
+                8558 Green Rd., LA
+              </p>
+            </div>
+            <div class="footer-contacts-info__description--links">
+              <img
+                src="img/footer/phone.svg"
+                alt="phone"
+                class="footer-contacts-info__description--image"
+              />
+              <p class="footer-contacts-info__description--text">
+                +1 (603) 555-0123
+              </p>
+            </div>
+            <div class="footer-contacts-info__description--links">
+              <img
+                src="img/footer/clock.svg"
+                alt="clock"
+                class="footer-contacts-info__description--image"
+              />
+              <p class="footer-contacts-info__description--text">
+                Mon–Sat: 9:00–23:00
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="index.js"></script>
 </html>
