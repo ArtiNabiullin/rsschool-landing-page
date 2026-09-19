@@ -1,0 +1,66 @@
+/* 1. Убираем внешние и внутренние отступы, задаем border-box всем элементам */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Базовые настройки для документа */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 3. Наследуем шрифты и свойства для элементов форм */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+/* 4. Списки без маркеров */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 5. Убираем подчеркивания у ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 6. Медиа-элементы адаптивны */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 7. Настройки таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 8. Кнопки сбрасывают дефолтный вид */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
