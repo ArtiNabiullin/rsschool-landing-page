@@ -1,15 +1,23 @@
-@use "abstracts/variables";
-@use "abstracts/mixins";
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
-@use "base/base";
-@use "base/typography";
+@import "base/base";
+@import "base/reset";
+@import "base/typography";
 
-@use "components/buttons";
+@import "components/buttons";
 
-@use "layout/header";
-@use "layout/main";
-@use "layout/footer";
-@use "layout/grid";
-@use "layout/menu";
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+@import "layout/menu";
 
-@use "themes/theme";
+@import "themes/theme";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $color-main;
+}

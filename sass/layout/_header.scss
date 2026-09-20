@@ -1,0 +1,33 @@
+.header {
+  margin: $margin-center;
+  margin-top: $margin-top-header;
+  .header-menu {
+    max-height: $height-header;
+    padding: $padding-header-menu;
+    @include flex($justify: space-between);
+  }
+  .header__list {
+    @include flex($justify: space-between, $gap: 40px);
+    .header__link {
+      @include font("links");
+      color: $color-primary;
+    }
+  }
+  .header-actions {
+    @include flex($justify: space-between, $gap: 24px);
+    .header-theme {
+      margin: 4px;
+      padding: 7px;
+    }
+    .theme__dark {
+      padding: 9px;
+    }
+  }
+  .coffee-menu {
+    @include flex($justify: space-between, $gap: 8px);
+    .coffee-menu__text {
+      @include font("links");
+      color: $color-primary;
+    }
+  }
+}
