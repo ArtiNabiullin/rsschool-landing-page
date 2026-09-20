@@ -97,7 +97,7 @@
         }
         .favorite-coffee__slider--description--text {
           @include font("medium");
-          @include flex();
+          text-align: $text-align;
           color: $color-primary;
           &::first-letter {
             text-transform: $text-transform;
@@ -106,6 +106,87 @@
         .favorite-coffee__slider--description--price {
           @include font("h3");
           color: $color-primary;
+        }
+      }
+    }
+  }
+}
+
+.about {
+  @include flex($gap: 20px);
+  .about__title {
+    @include font("h2");
+    text-align: $text-align;
+    color: $color-primary;
+    &::first-letter {
+      text-transform: $text-transform;
+    }
+  }
+  .about-container {
+  }
+}
+
+.mobile-app-container {
+  @include flex($gap: 100px);
+  .mobile-app-container__offer {
+    @include flex($flex: column, $gap: 40px);
+    max-width: $max-width-630;
+    .mobile-app-container__offer--title {
+      @include font("h2");
+      color: $color-primary;
+      &::first-letter {
+        text-transform: $text-transform;
+      }
+    }
+    .mobile-app-container__offer--text {
+      @include font("medium");
+      color: $color-primary;
+      &::first-letter {
+        text-transform: $text-transform;
+      }
+    }
+    .mobile-app-container__offer--buttons {
+      margin-right: auto;
+      @include flex($gap: 20px);
+      .mobile-buttons {
+        @include flex($gap: 8px);
+        min-width: $min-width-200;
+        padding: $padding-button-app;
+        border: 2px solid $color-Inverse;
+        border-radius: $border-radius-button;
+      }
+      .button-app-store__description {
+        @include flex($align: start, $flex: column, $gap: 2px);
+        .button-app-store--title {
+          @include font("caption");
+          color: $color-primary;
+          &::first-letter {
+            text-transform: $text-transform;
+          }
+        }
+        .button-app-store--text {
+          @include font("links");
+          color: $color-primary;
+          &::first-letter {
+            text-transform: $text-transform;
+          }
+        }
+      }
+      .button-google-play__description {
+        @include flex($align: start, $flex: column, $gap: 2px);
+        .button-google-play--title {
+          @include font("caption");
+          color: $color-primary;
+          &::first-letter {
+            text-transform: $text-transform;
+          }
+        }
+        .button-google-play--text {
+          @include font("links");
+          color: $color-primary;
+          &::first-letter {
+            text-transform: $text-transform;
+          }
         }
       }
     }

@@ -279,12 +279,7 @@ button {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0;
+  text-align: center;
   color: #403f3d;
 }
 .favorite-coffee-container .favorite-coffee__slider .favorite-coffee__slider--content .favorite-coffee__slider--description .favorite-coffee__slider--description--text::first-letter {
@@ -296,6 +291,140 @@ button {
   font-weight: 600;
   line-height: 125%;
   color: #403f3d;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.about .about__title {
+  font-family: inter, sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+  text-align: center;
+  color: #403f3d;
+}
+.about .about__title::first-letter {
+  text-transform: capitalize;
+}
+.mobile-app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.mobile-app-container .mobile-app-container__offer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 630px;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--title {
+  font-family: inter, sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+  color: #403f3d;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--title::first-letter {
+  text-transform: capitalize;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--text {
+  font-family: inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #403f3d;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--text::first-letter {
+  text-transform: capitalize;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--buttons {
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--buttons .mobile-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 200px;
+  padding: 12px 20px;
+  border: 2px solid #665f55;
+  border-radius: 100px;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--buttons .button-app-store__description {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--buttons .button-app-store__description .button-app-store--title {
+  font-family: inter, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #403f3d;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--buttons .button-app-store__description .button-app-store--title::first-letter {
+  text-transform: capitalize;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--buttons .button-app-store__description .button-app-store--text {
+  font-family: inter, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #403f3d;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--buttons .button-app-store__description .button-app-store--text::first-letter {
+  text-transform: capitalize;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--buttons .button-google-play__description {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--buttons .button-google-play__description .button-google-play--title {
+  font-family: inter, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #403f3d;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--buttons .button-google-play__description .button-google-play--title::first-letter {
+  text-transform: capitalize;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--buttons .button-google-play__description .button-google-play--text {
+  font-family: inter, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #403f3d;
+}
+.mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--buttons .button-google-play__description .button-google-play--text::first-letter {
+  text-transform: capitalize;
 }
 
 html {

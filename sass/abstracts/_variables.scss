@@ -10,6 +10,7 @@ $color-dark-bg-page: #292826;
 $padding-section: 0 40px;
 $padding-100: 100px;
 $padding-button: 20px 78px;
+$padding-button-app: 12px 20px;
 
 //margins
 $margin-center: 0 auto;
@@ -22,8 +23,11 @@ $border-radius-button: 100px;
 $border-radius-40: 40px;
 
 //widths
+$max-width-630: 630px;
 $max-width-530: 530px;
 $max-width-480: 480px;
+
+$min-width-200: 200px;
 
 // heights
 $height-header: 60px;
