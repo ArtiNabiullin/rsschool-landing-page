@@ -152,7 +152,7 @@
         @include flex($gap: 8px);
         min-width: $min-width-200;
         padding: $padding-button-app;
-        border: 2px solid $color-Inverse;
+        border: 1px solid $color-Inverse;
         border-radius: $border-radius-button;
       }
       .button-app-store__description {

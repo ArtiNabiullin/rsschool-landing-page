@@ -367,7 +367,7 @@ button {
   gap: 8px;
   min-width: 200px;
   padding: 12px 20px;
-  border: 2px solid #665f55;
+  border: 1px solid #665f55;
   border-radius: 100px;
 }
 .mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--buttons .button-app-store__description {
@@ -424,6 +424,102 @@ button {
   color: #403f3d;
 }
 .mobile-app-container .mobile-app-container__offer .mobile-app-container__offer--buttons .button-google-play__description .button-google-play--text::first-letter {
+  text-transform: capitalize;
+}
+
+.footer {
+  margin: 0 auto;
+  padding: 0 40px;
+  margin-bottom: 40px;
+}
+.footer .footer-container {
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 100px;
+  background-color: #665f55;
+  border-radius: 40px;
+}
+.footer .footer-container .footer-offer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 530px;
+}
+.footer .footer-container .footer-offer .footer-offer__title {
+  font-family: inter, sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+  color: #e1d4c9;
+}
+.footer .footer-container .footer-offer .footer-offer__title::first-letter {
+  text-transform: capitalize;
+}
+.footer .footer-container .footer-offer .footer-offer__socials {
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+.footer .footer-container .footer-offer .footer-offer__socials .footer-logo {
+  padding: 12px;
+  border: 1px solid #c1b6ad;
+  border-radius: 100px;
+}
+.footer .footer-container .footer-contacts-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.footer .footer-container .footer-contacts-info .footer-contacts-info__title {
+  margin-right: auto;
+  font-family: inter, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+  color: #e1d4c9;
+}
+.footer .footer-container .footer-contacts-info .footer-contacts-info__title::first-letter {
+  text-transform: capitalize;
+}
+.footer .footer-container .footer-contacts-info .footer-contacts-info__description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer .footer-container .footer-contacts-info .footer-contacts-info__description .footer-contacts-info__description--links {
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.footer .footer-container .footer-contacts-info .footer-contacts-info__description .footer-contacts-info__description--links .footer-contacts-info__description--text {
+  font-family: inter, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #e1d4c9;
+}
+.footer .footer-container .footer-contacts-info .footer-contacts-info__description .footer-contacts-info__description--links .footer-contacts-info__description--text::first-letter {
   text-transform: capitalize;
 }
 
