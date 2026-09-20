@@ -1,16 +1,18 @@
 .header {
-  margin: $margin-center;
-  margin-top: $margin-top-header;
+  margin: 20px auto;
   .header-menu {
     max-height: $height-header;
-    padding: $padding-header-menu;
+    padding: $padding-section;
     @include flex($justify: space-between);
   }
   .header__list {
     @include flex($justify: space-between, $gap: 40px);
-    .header__link {
+    .header__item {
       @include font("links");
       color: $color-primary;
+      &::first-letter {
+        text-transform: $text-transform;
+      }
     }
   }
   .header-actions {
@@ -28,6 +30,9 @@
     .coffee-menu__text {
       @include font("links");
       color: $color-primary;
+      &::first-letter {
+        text-transform: $text-transform;
+      }
     }
   }
 }

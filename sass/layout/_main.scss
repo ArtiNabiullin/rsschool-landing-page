@@ -1,0 +1,113 @@
+.main {
+  margin: $margin-center;
+}
+
+.section {
+  padding: $padding-section;
+  margin-bottom: $margin-bottom-section;
+}
+
+.color-word {
+  color: $color-accent;
+  font-style: $font-style;
+}
+
+.hero-container {
+  background: url(/img/header/img-hero.jpg);
+  border-radius: $border-radius-40;
+  background-size: cover;
+  background-position: center;
+  padding: $padding-100;
+  .hero-offer {
+    margin-right: $margin-right-hero;
+    max-width: $max-width-530;
+    @include flex($gap: 40px);
+    .hero-offer__title {
+      @include font("h1");
+      color: $color-main;
+      &::first-letter {
+        text-transform: $text-transform;
+      }
+    }
+    .hero-offer__description {
+      @include font("medium");
+      color: $color-main;
+      &::first-letter {
+        text-transform: $text-transform;
+      }
+    }
+    .hero-offer__button {
+      margin-right: auto;
+      padding: $padding-button;
+      background-color: $color-main;
+      border-radius: $border-radius-button;
+      position: relative;
+      text-decoration: none;
+      @include font("links");
+      color: $color-primary;
+      &::first-letter {
+        text-transform: $text-transform;
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-left: 8px;
+        vertical-align: middle;
+        background: url(/img/header/coffee-cup.svg) no-repeat center;
+        background-size: contain;
+
+        opacity: 0;
+        transform: translateX(-5px);
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease;
+      }
+      &:hover::after {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.favorite-coffee-container {
+  @include flex($flex: column, $gap: 40px);
+  .favorite-coffee__title {
+    @include font("h2");
+    color: $color-primary;
+    &::first-letter {
+      text-transform: $text-transform;
+    }
+  }
+  .favorite-coffee__slider {
+    @include flex();
+    .favorite-coffee__slider--content {
+      @include flex($flex: column, $gap: 20px);
+      .favorite-coffee__slider--description {
+        max-width: $max-width-480;
+        @include flex($flex: column, $gap: 16px);
+        .favorite-coffee__slider--description--title {
+          @include font("h3");
+          color: $color-primary;
+          &::first-letter {
+            text-transform: $text-transform;
+          }
+        }
+        .favorite-coffee__slider--description--text {
+          @include font("medium");
+          @include flex();
+          color: $color-primary;
+          &::first-letter {
+            text-transform: $text-transform;
+          }
+        }
+        .favorite-coffee__slider--description--price {
+          @include font("h3");
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}

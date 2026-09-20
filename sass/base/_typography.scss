@@ -30,7 +30,6 @@ $typography-styles: (
     "font-size": $font-size-h1,
     "font-weight": $font-weight,
     "line-height": $line-height-105,
-    "text-transform": $text-transform,
   ),
   "h1-accent": (
     "font-family": $font-family,
@@ -38,14 +37,12 @@ $typography-styles: (
     "font-size": $font-size-h1,
     "font-weight": $font-weight,
     "line-height": $line-height-105,
-    "text-transform": $text-transform,
   ),
   "h1-mobile": (
     "font-family": $font-family,
     "font-size": $font-size-h1-mobile,
     "font-weight": $font-weight,
     "line-height": $line-height-115,
-    "text-transform": $text-transform,
   ),
   "h1-mobile-accent": (
     "font-family": $font-family,
@@ -53,14 +50,12 @@ $typography-styles: (
     "font-size": $font-size-h1-mobile,
     "font-weight": $font-weight,
     "line-height": $line-height-115,
-    "text-transform": $text-transform,
   ),
   "h2": (
     "font-family": $font-family,
     "font-size": $font-size-h2,
     "font-weight": $font-weight,
     "line-height": $line-height-125,
-    "text-transform": $text-transform,
   ),
   "h2-accent": (
     "font-family": $font-family,
@@ -68,14 +63,12 @@ $typography-styles: (
     "font-size": $font-size-h2,
     "font-weight": $font-weight,
     "line-height": $line-height-125,
-    "text-transform": $text-transform,
   ),
   "h2-mobile": (
     "font-family": $font-family,
     "font-size": $font-size-32,
     "font-weight": $font-weight,
     "line-height": $line-height-125,
-    "text-transform": $text-transform,
   ),
   "h2-accent-mobile": (
     "font-family": $font-family,
@@ -83,42 +76,36 @@ $typography-styles: (
     "font-size": $font-size-32,
     "font-weight": $font-weight,
     "line-height": $line-height-125,
-    "text-transform": $text-transform,
   ),
   "h3": (
     "font-family": $font-family,
     "font-size": $font-size-h3,
     "font-weight": $font-weight,
     "line-height": $line-height-125,
-    "text-transform": $text-transform,
   ),
   "medium": (
     "font-family": $font-family,
     "font-size": $font-size-medium,
     "font-weight": $font-weight-400,
     "line-height": $line-height-150,
-    "text-transform": $text-transform,
   ),
   "caption": (
     "font-family": $font-family,
     "font-size": $font-size-caption,
     "font-weight": $font-weight-400,
     "line-height": $line-height-140,
-    "text-transform": $text-transform,
   ),
   "links": (
     "font-family": $font-family,
     "font-size": $font-size-medium,
     "font-weight": $font-weight,
     "line-height": $line-height-150,
-    "text-transform": $text-transform,
   ),
   "burger": (
     "font-family": $font-family,
     "font-size": $font-size-32,
     "font-weight": $font-weight,
     "line-height": $line-height-125,
-    "text-transform": $text-transform,
   ),
 );
 
