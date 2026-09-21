@@ -1,0 +1,80 @@
+.footer {
+  margin: $margin-center;
+  padding: $padding-section;
+  margin-bottom: $margin-bottom-footer;
+  .footer-container {
+    padding: $padding-100;
+    @include flex($justify: start, $gap: 100px);
+    background-color: $color-Inverse;
+    border-radius: $border-radius-40;
+    .footer-offer {
+      @include flex($flex: column, $gap: 40px);
+      max-width: $max-width-530;
+      .footer-offer__title {
+        @include font("h2");
+        color: $color-main;
+        &::first-letter {
+          text-transform: $text-transform;
+        }
+      }
+      .footer-offer__socials {
+        margin-right: auto;
+        @include flex($gap: 17px);
+        .footer-logo {
+          padding: $padding-links;
+          border: 1px solid $color-border;
+          border-radius: $border-radius-button;
+          &:hover {
+            background-color: $color-main;
+            transition: background-color 0.3s ease;
+            .footer-logo__icon {
+              filter: invert(1);
+            }
+          }
+        }
+      }
+    }
+    .footer-contacts-info {
+      @include flex($flex: column, $gap: 40px);
+      .footer-contacts-info__title {
+        margin-right: auto;
+        @include font("h3");
+        color: $color-main;
+        &::first-letter {
+          text-transform: $text-transform;
+        }
+      }
+      .footer-contacts-info__description {
+        @include flex($flex: column, $gap: 16px);
+        .footer-contacts-info__description--links {
+          margin-right: auto;
+          position: relative;
+          @include flex($gap: 4px);
+          .footer-contacts-info__description--text {
+            @include font("links");
+            color: $color-main;
+            &::first-letter {
+              text-transform: $text-transform;
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 2px;
+            background-color: $color-main;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+          }
+
+          &:hover::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+}
