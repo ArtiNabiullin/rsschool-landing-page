@@ -1,0 +1,71 @@
+.main {
+  margin: $margin-center;
+  .main-container {
+    @include flex($flex: column, $gap: 40px);
+    padding: $padding-section;
+    margin-bottom: $margin-bottom-section;
+    .main-container__offer {
+      @include flex($flex: column, $gap: 40px);
+      .main-container__offer--wrapper {
+        max-width: $max-width-800;
+        text-align: center;
+        .main-container__offer--title {
+          @include font("h2");
+          color: $color-primary;
+          &::first-letter {
+            text-transform: $text-transform;
+          }
+        }
+      }
+      .main-container__offer--tabs {
+        @include flex($gap: 16px);
+        .main-container__offer--tab {
+          @include flex($gap: 8px);
+          padding: 8px 16px 8px 8px;
+          border: 1px solid $color-border;
+          border-radius: $border-radius-button;
+          .tab__text {
+            @include font("links");
+            color: $color-primary;
+            &::first-letter {
+              text-transform: $text-transform;
+            }
+          }
+        }
+      }
+    }
+    .main-container-grid {
+      @include grid();
+      .main-container-grid__card {
+        @include flex($flex: column, $align: start, $justify: null);
+        .main-container-grid__wrapper {
+          max-width: 310px;
+          @include flex($flex: column, $align: start, $gap: 20px);
+          padding: 20px;
+          .main-container-grid__card--title {
+            @include font("h3");
+            color: $color-primary;
+            &::first-letter {
+              text-transform: $text-transform;
+            }
+          }
+          .main-container-grid__card--text {
+            @include font("medium");
+            color: $color-primary;
+            &::first-letter {
+              text-transform: $text-transform;
+            }
+          }
+          .main-container-grid__card--price {
+            @include font("h3");
+            color: $color-primary;
+            text-transform: $text-transform;
+          }
+        }
+        .main-container-grid__card--image {
+          border-radius: $border-radius-40;
+        }
+      }
+    }
+  }
+}

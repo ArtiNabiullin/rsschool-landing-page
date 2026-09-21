@@ -13,13 +13,13 @@
   gap: $gap;
 }
 
-// @mixin grid($grid-gap: 30px 40px) {
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit, 270px);
-//   grid-template-rows: repeat(auto-fit, 270px);
-//   justify-content: center;
-//   gap: $grid-gap;
-// }
+@mixin grid($grid-gap: 40px) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  gap: $grid-gap;
+}
 
 @mixin font($style-name) {
   $style: map-get($typography-styles, $style-name);

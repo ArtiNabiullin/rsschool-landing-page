@@ -4,35 +4,83 @@
     max-height: $height-header;
     padding: $padding-section;
     @include flex($justify: space-between);
+    .header-link {
+      &:hover {
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+      }
+    }
   }
   .header__list {
     @include flex($justify: space-between, $gap: 40px);
     .header__item {
       @include font("links");
+      position: relative;
       color: $color-primary;
       &::first-letter {
         text-transform: $text-transform;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 2px;
+        background-color: $color-primary;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
       }
     }
   }
   .header-actions {
     @include flex($justify: space-between, $gap: 24px);
-    .header-theme {
-      margin: 4px;
-      padding: 7px;
-    }
-    .theme__dark {
-      padding: 9px;
+    .theme-witch {
+      border: 1px solid $color-border;
+      border-radius: $border-radius-button;
+      .header-theme {
+        margin: 4px;
+        padding: 7px;
+      }
+      .theme__light {
+        background-color: $color-accent;
+        border-radius: $border-radius-button;
+      }
+      .theme__dark {
+        padding: 9px;
+      }
     }
   }
   .coffee-menu {
     @include flex($justify: space-between, $gap: 8px);
+    position: relative;
     .coffee-menu__text {
       @include font("links");
       color: $color-primary;
       &::first-letter {
         text-transform: $text-transform;
       }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: $color-primary;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
     }
   }
 }
