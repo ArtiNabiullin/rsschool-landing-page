@@ -43,6 +43,7 @@
     .theme-witch {
       border: 1px solid $color-border;
       border-radius: $border-radius-button;
+      @include flex($justify: space-between, $gap: 8px);
       .header-theme {
         margin: 4px;
         padding: 7px;
