@@ -36,7 +36,12 @@
           </ul>
         </div>
         <div class="header-actions">
-          <button type="button" class="theme-witch" id="theme-toggle">
+          <button
+            type="button"
+            class="theme-witch"
+            id="theme-toggle"
+            aria-label="change theme"
+          >
             <div class="theme__light header-theme">
               <img
                 class="theme__icon"
@@ -52,14 +57,22 @@
               />
             </div>
           </button>
-          <div class="coffee-menu">
-            <a href="catalog.html" class="coffee-menu__text">menu</a>
+          <a href="catalog.html" class="coffee-menu">
+            <p class="coffee-menu__text">menu</p>
             <img
               class="coffee-menu__icon"
               src="img/header/coffee-cup.svg"
               alt="Menu Icon"
             />
-          </div>
+          </a>
+          <button
+            class="hamburger"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span class="hamburger__line"></span>
+          </button>
         </div>
       </div>
     </header>
@@ -282,7 +295,7 @@
                 +1 (603) 555-0123
               </p>
             </a>
-            <div class="footer-contacts-info__description--links">
+            <a href="#" class="footer-contacts-info__description--links">
               <img
                 src="img/footer/clock.svg"
                 alt="clock"
@@ -291,7 +304,7 @@
               <p class="footer-contacts-info__description--text">
                 Mon–Sat: 9:00–23:00
               </p>
-            </div>
+            </a>
           </div>
         </div>
       </div>

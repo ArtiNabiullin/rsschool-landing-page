@@ -24,9 +24,17 @@
           padding: 8px 16px 8px 8px;
           border: 1px solid $color-border;
           border-radius: $border-radius-button;
+          &:hover {
+            background-color: $color-Inverse;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
           .tab__text {
             @include font("links");
             color: $color-primary;
+            &:hover {
+              color: $color-main;
+            }
             &::first-letter {
               text-transform: $text-transform;
             }
@@ -40,6 +48,11 @@
         @include flex($flex: column, $align: start, $justify: null);
         border: 1px solid $color-border;
         border-radius: 40px;
+        &:hover {
+          opacity: 0.5;
+          cursor: pointer;
+          transition: opacity 0.3s ease;
+        }
         .main-container-grid__wrapper {
           max-width: 270px;
           @include flex($flex: column, $align: start);

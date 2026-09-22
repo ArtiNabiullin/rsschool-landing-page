@@ -18,15 +18,24 @@
   background-size: cover;
   background-position: center;
   padding: $padding-100;
+  @media (max-width: 600px) {
+    padding: 60px 16px;
+  }
   .hero-offer {
     margin-right: $margin-right-hero;
     max-width: $max-width-530;
+    @media (max-width: 1200px) {
+      margin-right: 0;
+    }
     @include flex($gap: 40px);
     .hero-offer__title {
       @include font("h1");
       color: $color-main;
       &::first-letter {
         text-transform: $text-transform;
+      }
+      @media (max-width: 600px) {
+        @include font("h1-mobile");
       }
     }
     .hero-offer__description {
@@ -77,13 +86,38 @@
   .favorite-coffee__title {
     @include font("h2");
     color: $color-primary;
+    text-align: center;
     &::first-letter {
       text-transform: $text-transform;
+    }
+    @media (max-width: 700px) {
+      @include font("h1-mobile");
+    }
+    @media (max-width: 400px) {
+      @include font("h2-mobile");
     }
   }
   .favorite-coffee__slider {
     @include flex($gap: 378px);
-
+    @media (max-width: 1460px) {
+      @include flex($gap: 200px);
+    }
+    @media (max-width: 1100px) {
+      @include flex($gap: 100px);
+    }
+    @media (max-width: 900px) {
+      @include flex($gap: 70px);
+    }
+    @media (max-width: 840px) {
+      @include flex($gap: 30px);
+    }
+    @media (max-width: 840px) {
+      @include flex($gap: 30px);
+    }
+    @media (max-width: 760px) {
+      max-width: 480px;
+      @include flex();
+    }
     .favorite-coffee__slider--content {
       @include flex($flex: column, $gap: 20px);
       .favorite-coffee__slider--description {
@@ -145,6 +179,10 @@
           transition: border-color 0.3s ease;
         }
       }
+      @media (max-width: 760px) {
+        max-width: 480px;
+        display: none;
+      }
     }
   }
 }
@@ -157,6 +195,12 @@
     color: $color-primary;
     &::first-letter {
       text-transform: $text-transform;
+    }
+    @media (max-width: 700px) {
+      @include font("h1-mobile");
+    }
+    @media (max-width: 400px) {
+      @include font("h2-mobile");
     }
   }
   .about-container {
@@ -175,6 +219,9 @@
           height: 430px;
           object-fit: cover;
           border-radius: $border-radius-20;
+          @media (max-width: $tablet) {
+            display: none;
+          }
         }
       }
       .about__images--column--2 {
@@ -190,6 +237,9 @@
           height: 430px;
           object-fit: cover;
           border-radius: $border-radius-20;
+          @media (max-width: $tablet) {
+            display: none;
+          }
         }
       }
     }
@@ -207,6 +257,12 @@
       &::first-letter {
         text-transform: $text-transform;
       }
+      @media (max-width: 700px) {
+        @include font("h1-mobile");
+      }
+      @media (max-width: 400px) {
+        @include font("h2-mobile");
+      }
     }
     .mobile-app-container__offer--text {
       @include font("medium");
@@ -218,6 +274,9 @@
     .mobile-app-container__offer--buttons {
       margin-right: auto;
       @include flex($gap: 20px);
+      @media (max-width: 500px) {
+        @include flex($flex: column, $gap: 20px);
+      }
       .mobile-buttons {
         @include flex($gap: 8px);
         min-width: $min-width-200;

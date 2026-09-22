@@ -19,6 +19,15 @@
         }
       }
       .header-actions {
+        .theme-witch {
+          .theme__light {
+            background-color: $color-dark-bg-page;
+          }
+          .theme__dark {
+            background-color: $color-accent;
+            border-radius: $border-radius-button;
+          }
+        }
         .coffee-menu {
           .coffee-menu__text {
             color: $color-main;
@@ -113,6 +122,9 @@
       }
       .main-container__offer--tabs {
         .main-container__offer--tab {
+          &:hover {
+            opacity: 0.5;
+          }
           .tab__text {
             color: $color-main;
           }
