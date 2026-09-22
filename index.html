@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,30 +36,43 @@
           </ul>
         </div>
         <div class="header-actions">
-          <div class="theme-witch">
-            <button type="button" class="theme__light header-theme">
+          <button
+            type="button"
+            class="theme-witch"
+            id="theme-toggle"
+            aria-label="change theme"
+          >
+            <span class="theme__light header-theme">
               <img
                 class="theme__icon"
                 src="img/buttons/Sun.svg"
                 alt="Sun Icon"
               />
-            </button>
-            <button type="button" class="theme__dark header-theme">
+            </span>
+            <span class="theme__dark header-theme">
               <img
                 class="theme__icon"
                 src="img/buttons/Moon.svg"
                 alt="Moon Icon"
               />
-            </button>
-          </div>
-          <div class="coffee-menu">
-            <a href="catalog.html" class="coffee-menu__text">menu</a>
+            </span>
+          </button>
+          <a href="catalog.html" class="coffee-menu">
+            <p class="coffee-menu__text">menu</p>
             <img
               class="coffee-menu__icon"
               src="img/header/coffee-cup.svg"
               alt="Menu Icon"
             />
-          </div>
+          </a>
+          <button
+            class="hamburger"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span class="hamburger__line"></span>
+          </button>
         </div>
       </div>
     </header>
@@ -83,7 +96,7 @@
       </section>
       <section class="favorite-coffee section" id="favorite-coffee">
         <div class="favorite-coffee-container">
-          <h2 class="favorite-coffee__title">
+          <h2 class="favorite-coffee__title main-section__text">
             choose your <span class="color-word">favorite</span> coffee
           </h2>
           <div class="favorite-coffee__slider">
@@ -99,14 +112,20 @@
                   alt="coffee-slider-1"
                 />
                 <div class="favorite-coffee__slider--description">
-                  <p class="favorite-coffee__slider--description--title">
+                  <p
+                    class="favorite-coffee__slider--description--title main-section__text"
+                  >
                     s’mores Frappuccino
                   </p>
-                  <p class="favorite-coffee__slider--description--text">
+                  <p
+                    class="favorite-coffee__slider--description--text main-section__text"
+                  >
                     this new drink takes an espresso and mixes it with brown
                     sugar and cinnamon before being topped with oat milk.
                   </p>
-                  <p class="favorite-coffee__slider--description--price">
+                  <p
+                    class="favorite-coffee__slider--description--price main-section__text"
+                  >
                     $5.50
                   </p>
                 </div>
@@ -120,7 +139,7 @@
         </div>
       </section>
       <section class="about section" id="about">
-        <h2 class="about__title">
+        <h2 class="about__title main-section__text">
           Resource is
           <span class="color-word">the perfect and cozy place</span> where you
           can enjoy a variety of hot beverages, relax, catch up with friends, or
@@ -158,37 +177,45 @@
       <section class="mobile-app section" id="mobile">
         <div class="mobile-app-container">
           <div class="mobile-app-container__offer">
-            <h2 class="mobile-app-container__offer--title">
+            <h2 class="mobile-app-container__offer--title main-section__text">
               <span class="color-word">download</span> our app to start ordering
             </h2>
-            <p class="mobile-app-container__offer--text">
+            <p class="mobile-app-container__offer--text main-section__text">
               download the Resource app today and experience the comfort of
               ordering your favorite coffee from wherever you are
             </p>
             <div class="mobile-app-container__offer--buttons">
               <button type="button" class="button-app-store mobile-buttons">
                 <img
-                  src="img/buttons/icon 1.svg"
+                  src="img/buttons/icon-1.svg"
                   class="button-app-store__image button-app"
                   alt="app-store"
                 />
-                <div class="button-app-store__description buttons__mobile-app">
-                  <p class="button-app-store--title">available on the</p>
-                  <p class="button-app-store--text">app Store</p>
-                </div>
+                <span class="button-app-store__description buttons__mobile-app">
+                  <span class="button-app-store--title main-section__text">
+                    available on the
+                  </span>
+                  <span class="button-app-store--text main-section__text">
+                    app Store
+                  </span>
+                </span>
               </button>
               <button type="button" class="button-google-play mobile-buttons">
                 <img
-                  src="img/buttons/Icon 2.svg"
+                  src="img/buttons/Icon-2.svg"
                   class="button-google-play__image button-app"
                   alt="google-play"
                 />
-                <div
+                <span
                   class="button-google-play__description buttons__mobile-app"
                 >
-                  <p class="button-google-play--title">available on</p>
-                  <p class="button-google-play--text">google Play</p>
-                </div>
+                  <span class="button-google-play--title main-section__text">
+                    available on
+                  </span>
+                  <span class="button-google-play--text main-section__text">
+                    google Play
+                  </span>
+                </span>
               </button>
             </div>
           </div>
@@ -256,7 +283,7 @@
               </p>
             </a>
             <a
-              href="tel:+1 (603) 555-0123"
+              href="tel:+1(603)555-0123"
               class="footer-contacts-info__description--links"
             >
               <img
@@ -268,7 +295,7 @@
                 +1 (603) 555-0123
               </p>
             </a>
-            <div class="footer-contacts-info__description--links">
+            <a href="#" class="footer-contacts-info__description--links">
               <img
                 src="img/footer/clock.svg"
                 alt="clock"
@@ -277,11 +304,11 @@
               <p class="footer-contacts-info__description--text">
                 Mon–Sat: 9:00–23:00
               </p>
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </footer>
+    <script src="main.js"></script>
   </body>
-  <script src="main.js"></script>
 </html>

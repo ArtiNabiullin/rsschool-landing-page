@@ -15,18 +15,39 @@
           &::first-letter {
             text-transform: $text-transform;
           }
+          @media (max-width: 700px) {
+            @include font("h1-mobile");
+          }
+          @media (max-width: 400px) {
+            @include font("h2-mobile");
+          }
         }
       }
       .main-container__offer--tabs {
         @include flex($gap: 16px);
+        @media (max-width: 500px) {
+          @include flex($gap: 8px);
+        }
         .main-container__offer--tab {
           @include flex($gap: 8px);
           padding: 8px 16px 8px 8px;
           border: 1px solid $color-border;
           border-radius: $border-radius-button;
+          &:hover {
+            background-color: $color-Inverse;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          @media (max-width: 430px) {
+            @include flex($gap: 4px);
+            padding: 6px;
+          }
           .tab__text {
             @include font("links");
             color: $color-primary;
+            &:hover {
+              color: $color-main;
+            }
             &::first-letter {
               text-transform: $text-transform;
             }
@@ -36,30 +57,58 @@
     }
     .main-container-grid {
       @include grid();
+      @media (max-width: 1260px) {
+        @include grid($columns: repeat(3, 1fr));
+      }
+      @media (max-width: 950px) {
+        @include grid($columns: repeat(2, 1fr));
+        .main-container-grid__card:nth-child(n + 5) {
+          display: none;
+        }
+      }
+      @media (max-width: 570px) {
+        @include grid($columns: repeat(1, 1fr));
+      }
       .main-container-grid__card {
         @include flex($flex: column, $align: start, $justify: null);
+        border: 1px solid $color-border;
+        border-radius: 40px;
+        &:hover {
+          opacity: 0.5;
+          cursor: pointer;
+          transition: opacity 0.3s ease;
+        }
         .main-container-grid__wrapper {
-          max-width: 310px;
-          @include flex($flex: column, $align: start, $gap: 20px);
+          max-width: 270px;
+          @include flex($flex: column, $align: start);
           padding: 20px;
           .main-container-grid__card--title {
             @include font("h3");
             color: $color-primary;
+            padding-bottom: 12px;
             &::first-letter {
               text-transform: $text-transform;
             }
           }
-          .main-container-grid__card--text {
-            @include font("medium");
-            color: $color-primary;
-            &::first-letter {
+          .main-container-grid__card--wrapper {
+            height: 110px;
+            @include flex(
+              $flex: column,
+              $justify: space-between,
+              $align: start
+            );
+            .main-container-grid__card--text {
+              @include font("medium");
+              color: $color-primary;
+              &::first-letter {
+                text-transform: $text-transform;
+              }
+            }
+            .main-container-grid__card--price {
+              @include font("h3");
+              color: $color-primary;
               text-transform: $text-transform;
             }
-          }
-          .main-container-grid__card--price {
-            @include font("h3");
-            color: $color-primary;
-            text-transform: $text-transform;
           }
         }
         .main-container-grid__card--image {

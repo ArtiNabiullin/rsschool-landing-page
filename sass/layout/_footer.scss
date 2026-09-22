@@ -7,6 +7,10 @@
     @include flex($justify: start, $gap: 100px);
     background-color: $color-Inverse;
     border-radius: $border-radius-40;
+    @media (max-width: 500px) {
+      padding: 60px 16px;
+      @include flex($justify: start, $gap: 40px);
+    }
     .footer-offer {
       @include flex($flex: column, $gap: 40px);
       max-width: $max-width-530;
@@ -15,6 +19,12 @@
         color: $color-main;
         &::first-letter {
           text-transform: $text-transform;
+        }
+        @media (max-width: 700px) {
+          @include font("h1-mobile");
+        }
+        @media (max-width: 400px) {
+          @include font("h2-mobile");
         }
       }
       .footer-offer__socials {
