@@ -195,7 +195,7 @@ button {
 }
 
 .hero-container {
-  background: url(/img/header/img-hero.jpg);
+  background: url(../img/header/img-hero.jpg);
   border-radius: 40px;
   background-size: cover;
   background-position: center;
