@@ -1,0 +1,19 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/base";
+@import "base/reset";
+@import "base/typography";
+
+@import "components/buttons";
+
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+@import "layout/menu";
+
+@import "themes/theme";
+
+html {
+  scroll-behavior: smooth;
+}

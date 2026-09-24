@@ -1,0 +1,333 @@
+.main {
+  margin: $margin-center;
+}
+
+.section {
+  padding: $padding-section;
+  margin-bottom: $margin-bottom-section;
+}
+
+.color-word {
+  color: $color-accent;
+  font-style: $font-style;
+}
+
+.hero-container {
+  background: url(../img/header/img-hero.jpg);
+  border-radius: $border-radius-40;
+  background-size: cover;
+  background-position: center;
+  padding: $padding-100;
+  @media (max-width: 600px) {
+    padding: 60px 16px;
+  }
+  .hero-offer {
+    margin-right: $margin-right-hero;
+    max-width: $max-width-530;
+    @media (max-width: 1200px) {
+      margin-right: 0;
+    }
+    @include flex($gap: 40px);
+    .hero-offer__title {
+      @include font("h1");
+      color: $color-main;
+      &::first-letter {
+        text-transform: $text-transform;
+      }
+      @media (max-width: 600px) {
+        @include font("h1-mobile");
+      }
+    }
+    .hero-offer__description {
+      @include font("medium");
+      color: $color-main;
+      &::first-letter {
+        text-transform: $text-transform;
+      }
+    }
+    .hero-offer__button {
+      margin-right: auto;
+      padding: $padding-button;
+      background-color: $color-main;
+      border-radius: $border-radius-button;
+      position: relative;
+      text-decoration: none;
+      @include font("links");
+      color: $color-primary;
+      &::first-letter {
+        text-transform: $text-transform;
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-left: 8px;
+        vertical-align: middle;
+        background: url(/img/header/coffee-cup.svg) no-repeat center;
+        background-size: contain;
+
+        opacity: 0;
+        transform: translateX(-5px);
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease;
+      }
+      &:hover::after {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.favorite-coffee-container {
+  @include flex($flex: column, $gap: 40px);
+  .favorite-coffee__title {
+    @include font("h2");
+    color: $color-primary;
+    text-align: center;
+    &::first-letter {
+      text-transform: $text-transform;
+    }
+    @media (max-width: 700px) {
+      @include font("h1-mobile");
+    }
+    @media (max-width: 400px) {
+      @include font("h2-mobile");
+    }
+  }
+  .favorite-coffee__slider {
+    @include flex($gap: 378px);
+    @media (max-width: 1460px) {
+      @include flex($gap: 200px);
+    }
+    @media (max-width: 1100px) {
+      @include flex($gap: 100px);
+    }
+    @media (max-width: 900px) {
+      @include flex($gap: 70px);
+    }
+    @media (max-width: 840px) {
+      @include flex($gap: 30px);
+    }
+    @media (max-width: 840px) {
+      @include flex($gap: 30px);
+    }
+    @media (max-width: 760px) {
+      max-width: 480px;
+      @include flex();
+    }
+    .favorite-coffee__slider--content {
+      @include flex($flex: column, $gap: 20px);
+      .favorite-coffee__slider--description {
+        max-width: $max-width-480;
+        @include flex($flex: column, $gap: 16px);
+        .favorite-coffee__slider--description--title {
+          @include font("h3");
+          color: $color-primary;
+          &::first-letter {
+            text-transform: $text-transform;
+          }
+        }
+        .favorite-coffee__slider--description--text {
+          @include font("medium");
+          text-align: $text-align;
+          color: $color-primary;
+          &::first-letter {
+            text-transform: $text-transform;
+          }
+        }
+        .favorite-coffee__slider--description--price {
+          @include font("h3");
+          color: $color-primary;
+        }
+      }
+    }
+    .favorite-coffee__arrow {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      border: 1px solid $color-Inverse;
+      border-radius: $border-radius-button;
+      background: transparent;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid $color-Inverse;
+        border-right: 2px solid $color-Inverse;
+      }
+
+      &--left::before {
+        transform: translate(-35%, -50%) rotate(-135deg);
+      }
+
+      &--right::before {
+        transform: translate(-65%, -50%) rotate(45deg);
+      }
+
+      &:hover {
+        background-color: $color-Inverse;
+        transition: background-color 0.3s ease;
+        &::before {
+          border-color: $color-main;
+          transition: border-color 0.3s ease;
+        }
+      }
+      @media (max-width: 760px) {
+        max-width: 480px;
+        display: none;
+      }
+    }
+  }
+}
+
+.about {
+  @include flex($gap: 20px);
+  .about__title {
+    @include font("h2");
+    text-align: $text-align;
+    color: $color-primary;
+    &::first-letter {
+      text-transform: $text-transform;
+    }
+    @media (max-width: 700px) {
+      @include font("h1-mobile");
+    }
+    @media (max-width: 400px) {
+      @include font("h2-mobile");
+    }
+  }
+  .about-container {
+    .about__images {
+      @include flex($gap: 40px);
+      .about__images--column--1 {
+        @include flex($flex: column, $gap: 40px);
+        .about__images--column--big {
+          width: 660px;
+          height: 590px;
+          object-fit: cover;
+          border-radius: $border-radius-20;
+        }
+        .about__images--column--small {
+          width: 660px;
+          height: 430px;
+          object-fit: cover;
+          border-radius: $border-radius-20;
+          @media (max-width: $tablet) {
+            display: none;
+          }
+        }
+      }
+      .about__images--column--2 {
+        @include flex($flex: column, $gap: 40px);
+        .about__images--column--big {
+          width: 660px;
+          height: 590px;
+          object-fit: cover;
+          border-radius: $border-radius-20;
+        }
+        .about__images--column--small {
+          width: 660px;
+          height: 430px;
+          object-fit: cover;
+          border-radius: $border-radius-20;
+          @media (max-width: $tablet) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile-app-container {
+  @include flex($gap: 100px);
+  .mobile-app-container__offer {
+    @include flex($flex: column, $gap: 40px);
+    max-width: $max-width-630;
+    .mobile-app-container__offer--title {
+      @include font("h2");
+      color: $color-primary;
+      &::first-letter {
+        text-transform: $text-transform;
+      }
+      @media (max-width: 700px) {
+        @include font("h1-mobile");
+      }
+      @media (max-width: 400px) {
+        @include font("h2-mobile");
+      }
+    }
+    .mobile-app-container__offer--text {
+      @include font("medium");
+      color: $color-primary;
+      &::first-letter {
+        text-transform: $text-transform;
+      }
+    }
+    .mobile-app-container__offer--buttons {
+      margin-right: auto;
+      @include flex($gap: 20px);
+      @media (max-width: 500px) {
+        @include flex($flex: column, $gap: 20px);
+      }
+      .mobile-buttons {
+        @include flex($gap: 8px);
+        min-width: $min-width-200;
+        padding: $padding-button-app;
+        border: 1px solid $color-Inverse;
+        border-radius: $border-radius-button;
+        &:hover {
+          background-color: $color-Inverse;
+          transition: background-color 0.3s ease;
+          .button-app {
+            filter: invert(1);
+          }
+          .buttons__mobile-app {
+            filter: invert(1);
+          }
+        }
+      }
+      .button-app-store__description {
+        @include flex($align: start, $flex: column, $gap: 2px);
+        .button-app-store--title {
+          @include font("caption");
+          color: $color-primary;
+          &::first-letter {
+            text-transform: $text-transform;
+          }
+        }
+        .button-app-store--text {
+          @include font("links");
+          color: $color-primary;
+          &::first-letter {
+            text-transform: $text-transform;
+          }
+        }
+      }
+      .button-google-play__description {
+        @include flex($align: start, $flex: column, $gap: 2px);
+        .button-google-play--title {
+          @include font("caption");
+          color: $color-primary;
+          &::first-letter {
+            text-transform: $text-transform;
+          }
+        }
+        .button-google-play--text {
+          @include font("links");
+          color: $color-primary;
+          &::first-letter {
+            text-transform: $text-transform;
+          }
+        }
+      }
+    }
+  }
+}
