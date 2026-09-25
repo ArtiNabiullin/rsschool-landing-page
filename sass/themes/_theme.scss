@@ -13,6 +13,17 @@
     .header-menu {
       .header-navigation {
         .header__list {
+          @media (max-width: 860px) {
+            background-color: $color-dark-bg-page;
+
+            .header__item {
+              color: $color-main;
+
+              &::after {
+                background-color: $color-main;
+              }
+            }
+          }
           .header__item {
             color: $color-main;
           }
