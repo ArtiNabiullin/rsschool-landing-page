@@ -109,54 +109,54 @@
       @include font("h2-mobile");
     }
   }
-  .favorite-coffee__slider {
-    @include flex($gap: 378px);
-    @media (max-width: 1460px) {
-      @include flex($gap: 200px);
-    }
-    @media (max-width: 1100px) {
-      @include flex($gap: 100px);
-    }
-    @media (max-width: 900px) {
-      @include flex($gap: 70px);
-    }
-    @media (max-width: 840px) {
-      @include flex($gap: 30px);
-    }
-    @media (max-width: 840px) {
-      @include flex($gap: 30px);
-    }
+  .favorite-coffee__sliders {
+    @include flex($gap: 40px, $wrap: nowrap);
+    width: 100%;
     @media (max-width: 760px) {
-      max-width: 480px;
-      @include flex();
+      gap: 0;
     }
-    .favorite-coffee__slider--content {
-      @include flex($flex: column, $gap: 20px);
-      .favorite-coffee__slider--description {
-        max-width: $max-width-480;
-        @include flex($flex: column, $gap: 16px);
-        .favorite-coffee__slider--description--title {
-          @include font("h3");
-          color: $color-primary;
-          &::first-letter {
-            text-transform: $text-transform;
+    .favorite-coffee__slider-viewport {
+      flex: 1 1 0;
+      min-width: 0;
+      overflow: hidden;
+      @media (max-width: 760px) {
+        flex-basis: 100%;
+      }
+      .favorite-coffee__slider--row {
+        display: flex;
+        transition: transform 0.5s ease;
+        .favorite-coffee__slider {
+          flex: 0 0 100%;
+          min-width: 100%;
+          @include flex($flex: column, $gap: 20px);
+          .favorite-coffee__slider--description {
+            max-width: $max-width-480;
+            @include flex($flex: column, $gap: 16px);
+            .favorite-coffee__slider--description--title {
+              @include font("h3");
+              color: $color-primary;
+              &::first-letter {
+                text-transform: $text-transform;
+              }
+            }
+            .favorite-coffee__slider--description--text {
+              @include font("medium");
+              text-align: $text-align;
+              color: $color-primary;
+              &::first-letter {
+                text-transform: $text-transform;
+              }
+            }
+            .favorite-coffee__slider--description--price {
+              @include font("h3");
+              color: $color-primary;
+            }
           }
-        }
-        .favorite-coffee__slider--description--text {
-          @include font("medium");
-          text-align: $text-align;
-          color: $color-primary;
-          &::first-letter {
-            text-transform: $text-transform;
-          }
-        }
-        .favorite-coffee__slider--description--price {
-          @include font("h3");
-          color: $color-primary;
         }
       }
     }
     .favorite-coffee__arrow {
+      flex: 0 0 60px;
       position: relative;
       width: 60px;
       height: 60px;
@@ -192,7 +192,6 @@
         }
       }
       @media (max-width: 760px) {
-        max-width: 480px;
         display: none;
       }
     }
@@ -204,7 +203,11 @@
       height: 4px;
       border-radius: 6.25em;
       border: none;
-      background: $color-primary;
+      background: $color-border;
+      cursor: pointer;
+      &.control_active {
+        background-color: $color-Inverse;
+      }
     }
   }
 }
@@ -235,12 +238,20 @@
           height: 590px;
           object-fit: cover;
           border-radius: $border-radius-20;
+          &:hover {
+            transform: scale(105%);
+            transition: transform 0.3s ease;
+          }
         }
         .about__images--column--small {
           width: 660px;
           height: 430px;
           object-fit: cover;
           border-radius: $border-radius-20;
+          &:hover {
+            transform: scale(105%);
+            transition: transform 0.3s ease;
+          }
           @media (max-width: $tablet) {
             display: none;
           }
@@ -253,12 +264,20 @@
           height: 590px;
           object-fit: cover;
           border-radius: $border-radius-20;
+          &:hover {
+            transform: scale(105%);
+            transition: transform 0.3s ease;
+          }
         }
         .about__images--column--small {
           width: 660px;
           height: 430px;
           object-fit: cover;
           border-radius: $border-radius-20;
+          &:hover {
+            transform: scale(105%);
+            transition: transform 0.3s ease;
+          }
           @media (max-width: $tablet) {
             display: none;
           }
