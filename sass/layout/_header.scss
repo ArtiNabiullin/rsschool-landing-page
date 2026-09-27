@@ -4,7 +4,7 @@ body.is-resizing .header__list {
 
 .header {
   margin: 20px auto;
-  @media (max-width: 860px) {
+  @media (max-width: 768px) {
     position: relative;
     z-index: 30;
   }
@@ -21,7 +21,10 @@ body.is-resizing .header__list {
   }
   .header__list {
     @include flex($justify: space-between, $gap: 40px);
-    @media (max-width: 860px) {
+    @media (max-width: 870px) {
+      @include flex($justify: space-between, $gap: 20px);
+    }
+    @media (max-width: 768px) {
       position: fixed;
       top: 100px;
       right: 0;
@@ -35,7 +38,7 @@ body.is-resizing .header__list {
         transform 0.35s ease,
         visibility 0s 0.35s;
       z-index: 20;
-      @include flex($flex: column, $gap: 70px);
+      @include flex($flex: column, $gap: 60px);
     }
     &.active {
       transform: translateX(0);
@@ -65,8 +68,27 @@ body.is-resizing .header__list {
       &:hover::after {
         transform: scaleX(1);
       }
-      @media (max-width: 860px) {
+      @media (max-width: 768px) {
         @include font("burger");
+      }
+    }
+    .header__item--burger-menu {
+      display: none;
+      @media (max-width: 768px) {
+        display: flex;
+        .coffee-menu__burger-menu {
+          margin-top: 40px;
+          @include flex($gap: 16px);
+          .coffee-menu__text--burger-menu {
+            &::first-letter {
+              text-transform: $text-transform;
+            }
+          }
+          .coffee-menu__icon--burger-menu {
+            width: 40px;
+            height: 40px;
+          }
+        }
       }
     }
   }
@@ -91,14 +113,8 @@ body.is-resizing .header__list {
   }
 
   .coffee-menu {
+    position: relative;
     @include flex($justify: space-between, $gap: 8px);
-    .coffee-menu__text {
-      @include font("links");
-      color: $color-primary;
-      &::first-letter {
-        text-transform: $text-transform;
-      }
-    }
     &::after {
       content: "";
       position: absolute;
@@ -111,9 +127,18 @@ body.is-resizing .header__list {
       transform-origin: left;
       transition: transform 0.3s ease;
     }
-
     &:hover::after {
       transform: scaleX(1);
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+    .coffee-menu__text {
+      @include font("links");
+      color: $color-primary;
+      &::first-letter {
+        text-transform: $text-transform;
+      }
     }
   }
 }
@@ -123,7 +148,7 @@ body.is-resizing .header__list {
   display: none;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 768px) {
   .hamburger {
     display: inline-block;
     position: relative;
