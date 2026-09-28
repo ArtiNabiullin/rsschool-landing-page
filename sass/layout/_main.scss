@@ -13,15 +13,26 @@
 }
 
 .hero-container {
-  background: url(../img/header/img-hero.jpg);
+  position: relative;
+  overflow: hidden;
   border-radius: $border-radius-40;
-  background-size: cover;
-  background-position: center;
   padding: $padding-100;
+
   @media (max-width: 600px) {
     padding: 60px 16px;
   }
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
   .hero-offer {
+    position: relative;
+    z-index: 2;
     margin-right: $margin-right-hero;
     max-width: $max-width-530;
     @media (max-width: 1200px) {
@@ -46,6 +57,7 @@
       }
     }
     .hero-offer__button {
+      position: relative;
       margin-right: auto;
       padding: $padding-button;
       background-color: $color-main;
@@ -59,23 +71,23 @@
       }
       &::after {
         content: "";
-        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: calc(50% + 28px);
         width: 16px;
         height: 16px;
-        margin-left: 8px;
-        vertical-align: middle;
         background: url(/img/header/coffee-cup.svg) no-repeat center;
-        background-size: contain;
 
         opacity: 0;
-        transform: translateX(-5px);
+        transform: translate(-8px, -50%);
         transition:
           opacity 0.2s ease,
           transform 0.2s ease;
+        pointer-events: none;
       }
       &:hover::after {
         opacity: 1;
-        transform: translateX(0);
+        transform: translate(0, -55%);
       }
     }
   }
@@ -97,54 +109,54 @@
       @include font("h2-mobile");
     }
   }
-  .favorite-coffee__slider {
-    @include flex($gap: 378px);
-    @media (max-width: 1460px) {
-      @include flex($gap: 200px);
-    }
-    @media (max-width: 1100px) {
-      @include flex($gap: 100px);
-    }
-    @media (max-width: 900px) {
-      @include flex($gap: 70px);
-    }
-    @media (max-width: 840px) {
-      @include flex($gap: 30px);
-    }
-    @media (max-width: 840px) {
-      @include flex($gap: 30px);
-    }
+  .favorite-coffee__sliders {
+    @include flex($gap: 40px, $wrap: nowrap);
+    width: 100%;
     @media (max-width: 760px) {
-      max-width: 480px;
-      @include flex();
+      gap: 0;
     }
-    .favorite-coffee__slider--content {
-      @include flex($flex: column, $gap: 20px);
-      .favorite-coffee__slider--description {
-        max-width: $max-width-480;
-        @include flex($flex: column, $gap: 16px);
-        .favorite-coffee__slider--description--title {
-          @include font("h3");
-          color: $color-primary;
-          &::first-letter {
-            text-transform: $text-transform;
+    .favorite-coffee__slider-viewport {
+      flex: 1 1 0;
+      min-width: 0;
+      overflow: hidden;
+      @media (max-width: 760px) {
+        flex-basis: 100%;
+      }
+      .favorite-coffee__slider--row {
+        display: flex;
+        transition: transform 0.5s ease;
+        .favorite-coffee__slider {
+          flex: 0 0 100%;
+          min-width: 100%;
+          @include flex($flex: column, $gap: 20px);
+          .favorite-coffee__slider--description {
+            max-width: $max-width-480;
+            @include flex($flex: column, $gap: 16px);
+            .favorite-coffee__slider--description--title {
+              @include font("h3");
+              color: $color-primary;
+              &::first-letter {
+                text-transform: $text-transform;
+              }
+            }
+            .favorite-coffee__slider--description--text {
+              @include font("medium");
+              text-align: $text-align;
+              color: $color-primary;
+              &::first-letter {
+                text-transform: $text-transform;
+              }
+            }
+            .favorite-coffee__slider--description--price {
+              @include font("h3");
+              color: $color-primary;
+            }
           }
-        }
-        .favorite-coffee__slider--description--text {
-          @include font("medium");
-          text-align: $text-align;
-          color: $color-primary;
-          &::first-letter {
-            text-transform: $text-transform;
-          }
-        }
-        .favorite-coffee__slider--description--price {
-          @include font("h3");
-          color: $color-primary;
         }
       }
     }
     .favorite-coffee__arrow {
+      flex: 0 0 60px;
       position: relative;
       width: 60px;
       height: 60px;
@@ -180,8 +192,21 @@
         }
       }
       @media (max-width: 760px) {
-        max-width: 480px;
         display: none;
+      }
+    }
+  }
+  .favorite-coffee__controls {
+    @include flex($gap: 0.75rem);
+    .favorite-coffee__control {
+      width: 40px;
+      height: 4px;
+      border-radius: 6.25em;
+      border: none;
+      background: $color-border;
+      cursor: pointer;
+      &.control_active {
+        background-color: $color-Inverse;
       }
     }
   }
@@ -213,12 +238,20 @@
           height: 590px;
           object-fit: cover;
           border-radius: $border-radius-20;
+          &:hover {
+            transform: scale(105%);
+            transition: transform 0.3s ease;
+          }
         }
         .about__images--column--small {
           width: 660px;
           height: 430px;
           object-fit: cover;
           border-radius: $border-radius-20;
+          &:hover {
+            transform: scale(105%);
+            transition: transform 0.3s ease;
+          }
           @media (max-width: $tablet) {
             display: none;
           }
@@ -231,12 +264,20 @@
           height: 590px;
           object-fit: cover;
           border-radius: $border-radius-20;
+          &:hover {
+            transform: scale(105%);
+            transition: transform 0.3s ease;
+          }
         }
         .about__images--column--small {
           width: 660px;
           height: 430px;
           object-fit: cover;
           border-radius: $border-radius-20;
+          &:hover {
+            transform: scale(105%);
+            transition: transform 0.3s ease;
+          }
           @media (max-width: $tablet) {
             display: none;
           }

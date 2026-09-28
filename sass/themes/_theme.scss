@@ -13,8 +13,25 @@
     .header-menu {
       .header-navigation {
         .header__list {
+          @media (max-width: 768px) {
+            background-color: $color-dark-bg-page;
+
+            .header__item {
+              color: $color-main;
+
+              &::after {
+                background-color: $color-main;
+              }
+            }
+          }
           .header__item {
             color: $color-main;
+            .coffee-menu__burger-menu {
+              .coffee-menu__icon--burger-menu {
+                background-color: $color-main;
+                border-radius: $border-radius-button;
+              }
+            }
           }
         }
       }
@@ -149,5 +166,15 @@
         }
       }
     }
+  }
+}
+
+[data-theme="dark"] .product-modal__option {
+  border-color: $color-border;
+  color: $color-main;
+
+  &.is-active {
+    background-color: $color-Inverse;
+    color: $color-main;
   }
 }

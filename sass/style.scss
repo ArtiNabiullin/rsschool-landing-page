@@ -10,10 +10,15 @@
 @import "layout/header";
 @import "layout/main";
 @import "layout/footer";
-@import "layout/menu";
+@import "layout/catalog";
+@import "layout/modal";
 
 @import "themes/theme";
 
 html {
   scroll-behavior: smooth;
+}
+
+body.lock {
+  overflow: hidden;
 }
