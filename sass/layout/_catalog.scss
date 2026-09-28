@@ -138,8 +138,11 @@
   border-radius: 50%;
   background: transparent;
   color: $color-primary;
-  cursor: pointer;
-
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
   &.is-active {
     background-color: $color-Inverse;
     color: $color-main;

@@ -1,3 +1,5 @@
+import { openProductModal } from "./modal.js";
+
 let products = [];
 let activeCategory = "coffee";
 let currentPage = 1;
@@ -33,6 +35,7 @@ export function createProductCard(product) {
   content.append(title, details);
   card.append(image, content);
 
+  card.addEventListener("click", () => openProductModal(product));
   return card;
 }
 

@@ -168,3 +168,13 @@
     }
   }
 }
+
+[data-theme="dark"] .product-modal__option {
+  border-color: $color-border;
+  color: $color-main;
+
+  &.is-active {
+    background-color: $color-Inverse;
+    color: $color-main;
+  }
+}
