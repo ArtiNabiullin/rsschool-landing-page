@@ -52,4 +52,11 @@ export function initBurger() {
       closeMenu();
     }
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && nav.classList.contains("active")) {
+      closeMenu();
+      hamburger.focus();
+    }
+  });
 }

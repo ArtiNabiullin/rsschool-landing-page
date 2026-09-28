@@ -6,6 +6,8 @@ export function initSlider() {
   const sliderControl = document.querySelectorAll(".favorite-coffee__control");
   let current = 0;
 
+  if (!sliderRow) return;
+
   function changeSlider() {
     sliderControl.forEach((control, indx) => {
       if (indx === current) {
